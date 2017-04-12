@@ -1,0 +1,4 @@
+<li><%= track.recording_file_name %>
+  <strong>Total <%= mileage_to_km track.mileage %></strong>
+
+   | <%= track.created_at %> <small><%= link_to 'delete', rental_track_path(id: track, rental_id: @rental), method: :delete, data: { confirm: 'Are you sure?' } %></small></li>

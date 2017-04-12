@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tracks for <%= @rental.name %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tracks.each do |track| %>
+      <%= track.recording_file_name %> | <%= track.created_at %>
+
+      <tr>
+        <td><%= link_to 'Edit', edit_rental_track_path(id: track, rental_id: @rental) %></td>
+        <td><%= link_to 'Destroy', rental_track_path(id: track, rental_id: @rental), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Track', new_rental_track_path(@rental) %>

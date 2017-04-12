@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h2>
+  <strong>Rental Name:</strong>
+  <%= @rental.name %>
+</h2>
+<p>
+  <strong>Tracks:</strong>
+  <ul>
+    <%= render partial: 'tracks/track', collection: @rental.tracks, locals: {rental: @rental} %>
+  </ul>
+</p>
+
+<%= link_to 'Add Track', new_rental_track_path(@rental) %> |
+<%= link_to 'Edit', edit_rental_path(@rental) %> |
+<%= link_to 'Back', rentals_path %>
