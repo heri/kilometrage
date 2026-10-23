@@ -37,3 +37,7 @@ rails s
 ```
 
 * Tester l'app à `http://localhost:3000`. Il y a des fichiers de coordonnées dans `/features/asset_specs`, au besoin
+
+## Who is behind this
+
+Heri is a software engineer, photographer, father and Montréaler. Building in the open — see more projects at [studiozenkai.com](https://studiozenkai.com).
